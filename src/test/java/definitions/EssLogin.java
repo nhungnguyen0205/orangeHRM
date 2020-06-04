@@ -31,7 +31,7 @@ public class EssLogin {
 
     @Then("{string} page will be displayed")
     public void pageWillBeDisplayed(String title) {
-        String actual = getDriver().findElement(By.xpath("//*[contains(text(),'"+title+"')]")).getText();
+        String actual = getDriver().findElement(By.xpath("//h1[contains(text(),'"+title+"')]")).getText();
         Assert.assertEquals(title,actual);
 
     }
