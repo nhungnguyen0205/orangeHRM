@@ -46,7 +46,10 @@ public class ContactDetails {
 
     @And("I select {string} in {string} field")
     public void iSelectInField(String text, String field) {
-        Select select =new Select( getDriver().findElement(By.id("contact_country")));
+//        Select select =new Select( getDriver().findElement(By.id("contact_country")));
+        Select select =new Select( getDriver().findElement(By.xpath("//*[contains(text(),'"+field+"')]/following-sibling::select")));
         select.selectByVisibleText(text);
+
+
     }
 }
