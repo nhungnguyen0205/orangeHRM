@@ -18,7 +18,7 @@ Feature: Create employees
     Then I wait some seconds
     Then "Personal Details" page will be displayed
 
-  Scenario: Add Leave Entitlement for employee by admin
+  Scenario Outline: Add Leave Entitlement for employee by admin
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
     When I type username "admin"
     And I type pass "admin123"
@@ -30,10 +30,16 @@ Feature: Create employees
     Then I wait some seconds
     When I type "Fiona Canvas" in "Employee " field
     And At "Employee ", I press enter on my keyboard
-    And I select "Maternity US" in "Leave Type" field
-    And I type "4" in "Entitlement" field
+    And I select <leaveTypeValue> in "Leave Type" field
+    And I type <leaveAmountValue> in "Entitlement" field
     And I click on "Save" button
     Then I wait some seconds
     Then message "Successfully Added" will be appeared
+    Examples:
+      | leaveTypeValue|leaveAmountValue|
+      | "Vacation US"  | "12"   |
+      | "Maternity US"  | "5"   |
+      |"Paternity US"   | "4" |
+
 
 
