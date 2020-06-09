@@ -1,3 +1,4 @@
+@Initialization
 Feature: Create employees
   Scenario: Create employee
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page

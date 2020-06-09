@@ -1,3 +1,4 @@
+@info
 Feature: Contact Details
   Scenario: ESS use can view Contact Details page
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page

@@ -1,3 +1,4 @@
+@info
 Feature: Emergency Contact
   Scenario: Ess user can view  Emergency Contact when he click on Emergency Contact on the left menu
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page

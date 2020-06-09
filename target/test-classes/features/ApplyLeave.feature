@@ -1,3 +1,4 @@
+@leave
 Feature: Apply Leave
   Scenario: Verify that ESS can see "Apply", "My Leave", "Entitlements" and "Reports" submenu
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
