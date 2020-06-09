@@ -1,3 +1,4 @@
+@login
 Feature: ESS user can login
   Scenario: Verify ESS user can login successfully with valid username and valid pass
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
@@ -15,7 +16,7 @@ Feature: ESS user can login
     Examples:
       | url                                                              | username | pass       | btn     | err                   |
 #  Verify ESS user can not login with invalid username and valid pass
-      | "https://opensource-demo.orangehrmlive.com/index.php/auth/login" | "fiona"  | "12345678" | "LOGIN" | "Invalid credentials" |
+      | "https://opensource-demo.orangehrmlive.com/index.php/auth/login" | "fiona1"  | "12345678" | "LOGIN" | "Invalid credentials" |
 #  Verify ESS user can not login with valid username and invalid pass
       | "https://opensource-demo.orangehrmlive.com/index.php/auth/login" | "fiona"  | "123456789" | "LOGIN" | "Invalid credentials" |
       #  Verify ESS user can not login with blank username

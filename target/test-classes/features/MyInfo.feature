@@ -1,5 +1,5 @@
+@info
 Feature: Personal Details page
-
   Scenario Outline: Verify ESS user can view Personal Details page
     Given I open <url> page
     When I type username <username>

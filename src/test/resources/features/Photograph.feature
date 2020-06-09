@@ -1,3 +1,4 @@
+@info
 Feature: Photograph
   Scenario Outline: Verify that ESS user can upload photograph successfully
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
