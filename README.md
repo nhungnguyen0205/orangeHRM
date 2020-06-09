@@ -1,22 +1,27 @@
 # orangeHRM
-Automation: Selenium + Web Driver + Cucumber
-                UPLOAD SOURCE FROM LOCAL TO GITHUB AT THE FIRST TIME
-1. Create a new repository on GitHub
-2. Open Terminal.
-3. Change the current working directory to your local project.
-4. Initialize the local directory as a Git repository.
-     git init
-5. Add the files in your new local repository. This stages them for the first commit.
-     git add .
-6. Commit the files that you've staged in your local repository.
-     git commit -m "First commit"
-7. At the top of your GitHub repository's Quick Setup page, click  to copy the remote repository URL.
-8. In Terminal, add the URL for the remote repository where your local repository will be pushed.
-    git remote add origin remote repository URL : # Sets the new remote
-    git remote -v : Verifies the new remote URL
-9. Push the changes in your local repository to GitHub.
-    git push -u origin master:  Pushes the changes in your local repository up to the remote repository you specified as the origin
+Automation: Selenium + Web Driver + Cucumber + Java  on https://opensource-demo.orangehrmlive.com/
+Framework set up : 
+  1. INSTALL JAVA 11 (Java Development Kit)
+  2. INSTALL GIT (source control management)
+  3. INSTALL INTELLIJ (integrated development environment)
+  
+  
+ Checkout the project:
+  1. In IDE, select “Check out from Version Control”
+  2. Select Git, for URL, choose https://github.com/nhungnguyen0205/orangeHRM.git
+  3. Default folder to checkout will go into /IdeaProjects/
+  4. Click Clone
+  
+  Initial project configuration:
+    1. After checkout, it will propose to create IntelliJ IDEA project from the sources, click Yes
+    2. If it proposes to do Maven Import, agree with it. It might also go with downloading Maven sources, just wait for the tasks to finish for a few minutes
     
-    
-    
-    git pull origin master : origin from server, master: branch. 
+  Run project : 
+  Open termial and run as following : 
+    1. mvn clean test -Dtest=Initialization
+    2. mvn clean test -Dtest=login
+    3. mvn clean test -Dtest=info
+    4. mvn clean test -Dtest=leave
+
+   Note: User on this website sometime is deleted, so if errors occur, please run again from step 1 to step 4 
+             
