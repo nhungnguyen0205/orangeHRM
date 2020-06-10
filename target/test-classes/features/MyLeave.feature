@@ -9,3 +9,51 @@ Feature: My Leave
     When I focus mouse on "Leave"
     And I click on "My Leave" on SubMenu
     Then "My Leave List" page will be displayed
+  Scenario: Verify that Date and  Status can be clickable
+    Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
+    When I type username "fiona"
+    And I type pass "12345678"
+    And I click on "LOGIN" button
+    Then I wait some seconds
+    When I focus mouse on "Leave"
+    And I click on "My Leave" on SubMenu
+    Then I wait some seconds
+    Then Date, Name, and Status can be clickable
+  Scenario: Verify that PIM record will be displayed when ESS click on "Employee Name"
+    Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
+    When I type username "fiona"
+    And I type pass "12345678"
+    And I click on "LOGIN" button
+    Then I wait some seconds
+    When I focus mouse on "Leave"
+    And I click on "My Leave" on SubMenu
+    Then I wait some seconds
+    When I click on data on the "1" row at column "2"
+    Then "Personal Details" page will be displayed
+  Scenario Outline: Verify that "My Leave Details" page will be displayed when ESS click on Date or Status
+    Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
+    When I type username "fiona"
+    And I type pass "12345678"
+    And I click on "LOGIN" button
+    Then I wait some seconds
+    When I focus mouse on "Leave"
+    And I click on "My Leave" on SubMenu
+    Then I wait some seconds
+    When I click on data on the <rownum> row at column <column>
+    Then "My Leave Details" page will be displayed
+    Examples:
+      |rownum|column|
+#      Click on Date
+      |  "1"  |"1"|
+#      Click on Status
+      |  "1"  |"6"|
+    Scenario: Verify that ESS user can only Cancel his request
+      Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
+      When I type username "fiona"
+      And I type pass "12345678"
+      And I click on "LOGIN" button
+      Then I wait some seconds
+      When I focus mouse on "Leave"
+      And I click on "My Leave" on SubMenu
+      Then I wait some seconds
+      Then At column "8" of row "1",ESS user can only see "Select Action" and "Approve" in Actions dropdown list
