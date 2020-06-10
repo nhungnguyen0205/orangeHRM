@@ -12,6 +12,5 @@ import org.junit.runner.RunWith;
         tags = {"@leave"} // same as VM option mvn clean test -Dcucumber.options="--tags @Sanity"
         // or mvn clean test -Dtest=Sanity
 )
-
 public class leave {
 }
