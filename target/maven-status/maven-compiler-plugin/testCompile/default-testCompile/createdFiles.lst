@@ -8,6 +8,7 @@ runners/Info.class
 definitions/ContactDetails.class
 definitions/EmergencyContact.class
 runners/login.class
+definitions/Entitlement.class
 definitions/Photograph.class
 runners/Acceptance.class
 runners/Initialization.class

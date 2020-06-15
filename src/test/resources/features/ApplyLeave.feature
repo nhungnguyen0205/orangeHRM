@@ -8,7 +8,7 @@ Feature: Apply Leave
     Then I wait some seconds
     When I focus mouse on "Leave"
     Then I can see "Apply", "My Leave", "Entitlements" and "Reports" submenu
-
+@Initialization
   Scenario Outline: Verify that ESS can apply leave Full Day with valid data
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
     When I type username "fiona"
@@ -32,7 +32,7 @@ Feature: Apply Leave
     |leaveTypeValue|startDate|endDate|durationValue|
     |"Vacation US" |"2020-06-25"|"2020-06-25" |"Full Day"|
 #    |"Vacation US" |"2020-06-16"|"2020-06-16" |"Half Day"|
-
+@Initialization
   Scenario Outline: Verify that ESS can apply leave Haft Day with valid data
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
     When I type username "fiona"
@@ -55,7 +55,7 @@ Feature: Apply Leave
     Examples:
       |leaveTypeValue|startDate|endDate|durationValue|
       |"Paternity US" |"2020-06-22"|"2020-06-22" |"Half Day"|
-
+@Initialization
   Scenario: Verify that ESS can apply leave specify time with valid data
     Given I open "https://opensource-demo.orangehrmlive.com/index.php/auth/login" page
     When I type username "fiona"
