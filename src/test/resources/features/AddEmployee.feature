@@ -39,8 +39,8 @@ Feature: Create employees
     Examples:
       | leaveTypeValue|leaveAmountValue|
       | "Vacation US"  | "12"   |
-      | "Maternity US"  | "5"   |
-      |"Paternity US"   | "4" |
+      | "Maternity US" | "5"   |
+      |"Paternity US"  | "4" |
 
 
 
