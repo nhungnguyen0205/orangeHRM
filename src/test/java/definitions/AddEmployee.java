@@ -2,6 +2,7 @@ package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -34,5 +35,11 @@ public class AddEmployee {
     public void atIPressEnterOnMyKeyboard(String nameOfField) {
         WebElement el = getDriver().findElement(By.xpath("//*[contains(text(),'"+nameOfField+"')]/following-sibling::input"));
         el.sendKeys(Keys.ENTER);
+    }
+    public void asser(String q, String b)
+    {
+        q ="abc";
+        b="abc";
+        Assert.assertEquals(q,b);
     }
 }

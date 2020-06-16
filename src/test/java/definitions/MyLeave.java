@@ -70,15 +70,15 @@ public class MyLeave {
     @When("At column {int}, I select {string} at row which contains {string}")
     public void atColumnISelectAtRowWhichContains(int column, String status, String date) {
         column = column -1 ;
-        Select sel = new Select(getDriver().findElement(By.xpath("//*[contains(text(),'"+date+"')]/../following-sibling::td["+column+"]/select")));
+        Select sel = new Select(getDriver().findElement(By.xpath("//tr//*[contains(text(),'"+date+"')]/../following-sibling::td["+column+"]/select")));
         sel.selectByVisibleText(status);
     }
     @Then("At column {int}, status of row which contains {string} is changed to {string}")
     public void atColumnStatusOfRowWhichContainsIsChangedTo(int column, String date, String status) {
         column = column -1 ;
-         String exp = "Cancelled";
-         String actual = getDriver().findElement(By.xpath("//*[contains(text(),'"+date+"')]/../following-sibling::td["+column+"]")).getText();
-         Assert.assertTrue(actual.contains(exp));
+//         String exp = "Cancelled";
+         String actual = getDriver().findElement(By.xpath("//tr//*[contains(text(),'"+date+"')]/../following-sibling::td["+column+"]")).getText();
+         Assert.assertTrue(actual.contains(status));
     }
 }
 

@@ -13,4 +13,3 @@ Feature: Entitlements
     Then At column 3, "2020-01-01" will be displayed at "Valid From"
     Then At column 4, "2020-12-31" will be displayed at "Valid To"
     Then At column 5, "12" days for "Vacation US", "5" days for "Maternity US", and "4" days for "Paternity US".
-
